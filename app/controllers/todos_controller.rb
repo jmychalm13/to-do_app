@@ -27,7 +27,7 @@ class TodosController < ApplicationController
   end
 
   def edit
-    @todo = todo.find_by(id: params[:id])
+    @todo = Todo.find_by(id: params[:id])
     render :edit
   end
 
