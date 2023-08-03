@@ -1,0 +1,26 @@
+<h1>New Todo</h1>
+<form method="post" action="/todos">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Title</label>
+    <input type="text" name="todo[title]">
+  </div>
+  <div>
+    <label>Description</label>
+    <input type="text" name="todo[description]">
+  </div>
+  <div>
+    <label>Deadline</label>
+    <input type="date" name="todo[deadline]">
+  </div>
+  <div>
+    <label>Status</label>
+    <input type="checkbox" name="todo[deadline]" id="completed" value="Complete">
+    <label for="completed">Complete</label>
+    <input type="checkbox" name="todo[deadline]" id="not_completed" value="Incomplete">
+    <label for="not_completed">Incomplete</label>
+  </div>
+  <div>
+    <input type="submit" value="Create todo">
+  </div>
+</form>
