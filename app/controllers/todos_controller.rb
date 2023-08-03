@@ -15,8 +15,9 @@ class TodosController < ApplicationController
   end
 
   def create
+    pp params[:todo]
     todo = Todo.create(
-      user_id: params[:todo][:user_id],
+      user_id: current_user.id,
       title: params[:todo][:title],
       deadline: params[:todo][:deadline],
       description: params[:todo][:description],
