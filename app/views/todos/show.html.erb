@@ -4,4 +4,6 @@
 <h3><%= @todo.deadline %></h3>
 <p><%= @todo.description %></p>
 <a href="/todos/<%= @todo.id %>/edit">Edit Todo</a>
+
+<a href="/todos/<%= @todo.id %>" data-turbo-method="delete">Destroy todo</a>
 <a href="/todos">Back to all todos</a>

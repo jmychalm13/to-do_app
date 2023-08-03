@@ -43,4 +43,10 @@ class TodosController < ApplicationController
 
     redirect_to "/todos"
   end
+
+  def destroy
+    @todo = Todo.find_by(id: params[:id])
+    @todo.destroy
+    redirect_to "/todos", status: :see_other
+  end
 end
