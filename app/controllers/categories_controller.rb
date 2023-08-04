@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.create(
-      name: params[:name],
+      category: params[:category],
     )
     redirect_to "/categories"
   end

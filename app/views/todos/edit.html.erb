@@ -15,11 +15,8 @@
     <input type="date" name="todo[deadline]" value="<%= @todo.deadline %>">
   </div>
   <div>
-    <label>Status </label>
-    <input type="radio"  name="completed" value="<%= @todo.completed %>" id="completed">
-    <label for="completed">Complete</label><br>
-    <input type="radio" name="completed" id="not_completed" value="Incomplete">
-    <label for="not_completed">Incomplete</label>
+    <input type="checkbox"  name="todo[completed]" id="completed" <%= @todo.completed ? 'checked' : '' %>>
+    <label for="completed">Check if complete</label>
   </div>
   <div>
     <input type="submit" value="Update Todo">

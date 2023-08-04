@@ -1,11 +1,11 @@
 <h1>New Category</h1>
-<form method="post" action="/photos">
+<form method="post" action="/categories">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div>
     <label>Category</label>
-    <input type="text" name="category[name]">
+    <input type="text" name="category">
   </div>
   <div>
-    <input type="submit" value="Create photo">
+    <input type="submit" value="Create category">
   </div>
 </form>

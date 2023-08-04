@@ -33,12 +33,14 @@ class TodosController < ApplicationController
   end
 
   def update
-    @todo = Todo.update(
-      user_id: params[:todo][:user_id],
+    pp "HELLO"
+    pp !!params[:todo][:completed]
+    @todo = Todo.find_by(id: params[:id])
+    @todo.update(
       title: params[:todo][:title],
       deadline: params[:todo][:deadline],
       description: params[:todo][:description],
-      completed: params[:todo][:completed],
+      completed: !!params[:todo][:completed],
     )
 
     redirect_to "/todos"
