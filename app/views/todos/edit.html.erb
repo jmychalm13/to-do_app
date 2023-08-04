@@ -15,6 +15,10 @@
     <input type="date" name="todo[deadline]" value="<%= @todo.deadline %>">
   </div>
   <div>
+    <label>Category</label>
+    <input type="text" name="todo[category]" value="<%= @todo.category %>">
+  </div>
+  <div>
     <input type="checkbox"  name="todo[completed]" id="completed" <%= @todo.completed ? 'checked' : '' %>>
     <label for="completed">Check if complete</label>
   </div>
