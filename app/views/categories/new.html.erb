@@ -2,10 +2,10 @@
 <form method="post" action="/categories">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div>
-    <label>Category</label>
-    <input type="text" name="category">
+    <label class="form-label">Category</label>
+    <input type="text" name="category" class="form-control">
   </div>
   <div>
-    <input type="submit" value="Create category">
+    <input type="submit" value="Create category" class="btn">
   </div>
 </form>
