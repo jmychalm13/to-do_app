@@ -15,6 +15,7 @@ class TodosController < ApplicationController
   end
 
   def create
+    puts "Here I am!!!!****!!!!"
     pp params[:todo]
     todo = Todo.create(
       user_id: current_user.id,
