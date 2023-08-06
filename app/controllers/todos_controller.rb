@@ -11,12 +11,13 @@ class TodosController < ApplicationController
 
   def new
     @todo = Todo.new
+    @categories = Category.all
     render :new
   end
 
   def create
     puts "Here I am!!!!****!!!!"
-    pp params[:todo]
+    pp params
     todo = Todo.create(
       user_id: current_user.id,
       title: params[:todo][:title],
@@ -25,7 +26,10 @@ class TodosController < ApplicationController
       completed: params[:todo][:completed],
     )
 
-    redirect_to "/todos"
+    if todo.valid?
+      CategoryTodo.create(category_id: params[:category_id], todo_id: todo.id)
+      redirect_to "/todos"
+    end
   end
 
   def edit

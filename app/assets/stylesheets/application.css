@@ -1,3 +1,12 @@
 input.btn {
   background-color: #CBFFAF;
 }
+
+nav {
+  box-shadow: 0 3px 5px 1px #000;
+}
+
+nav img {
+  border-radius: 50%;
+  box-shadow: 0 3px 5px 1px #000;
+}

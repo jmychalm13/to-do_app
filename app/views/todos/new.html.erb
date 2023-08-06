@@ -13,9 +13,13 @@
     <label class="form-label">Deadline</label>
     <input type="date" name="todo[deadline]">
   </div>
-  <div>
-    <label class="form-label">Category</label>
-    <input type="text" name="todo[category][category]">
+  <div class="dropdown">
+    <select name="category_id" class="form-select" aria-label="Default select example">
+      <option selected>Choose a category:</option>
+      <% @categories.each do |category| %>
+        <option value="<%= category.id %>"><%= category.category %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <label class="form-label">Status</label>
