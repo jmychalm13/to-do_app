@@ -3,24 +3,20 @@
   <input type="hidden" name="_method" value="patch" autocomplete="off">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div>
-    <label>Title </label>
-    <input type="text" name="todo[title]" value="<%= @todo.title %>">
+    <label class="form-label">Title </label>
+    <input class="form-control" type="text" name="todo[title]" value="<%= @todo.title %>">
   </div>
   <div>
-    <label>Description </label>
-    <input type="text" name="todo[description]" value="<%= @todo.description %>">
+    <label class="form-label">Description </label>
+    <input class="form-control" type="text" name="todo[description]" value="<%= @todo.description %>">
   </div>
   <div>
-    <label>Deadline </label>
-    <input type="date" name="todo[deadline]" value="<%= @todo.deadline %>">
-  </div>
-  <div>
-    <label>Category</label>
-    <input type="text" name="todo[category]" value="<%= @todo.category %>">
+    <label class="form-label">Deadline </label>
+    <input class="form-control" type="date" name="todo[deadline]" value="<%= @todo.deadline %>">
   </div>
   <div>
     <input type="checkbox"  name="todo[completed]" id="completed" <%= @todo.completed ? 'checked' : '' %>>
-    <label for="completed">Check if complete</label>
+    <label class="form-label" for="completed">Check if complete</label>
   </div>
   <div>
     <input type="submit" value="Update Todo">

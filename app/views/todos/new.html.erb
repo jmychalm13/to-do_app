@@ -2,29 +2,29 @@
 <form method="post" action="/todos">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div>
-    <label>Title</label>
+    <label class="form-label">Title</label>
     <input type="text" name="todo[title]">
   </div>
   <div>
-    <label>Description</label>
+    <label class="form-label">Description</label>
     <input type="text" name="todo[description]">
   </div>
   <div>
-    <label>Deadline</label>
+    <label class="form-label">Deadline</label>
     <input type="date" name="todo[deadline]">
   </div>
   <div>
-    <label>Category</label>
+    <label class="form-label">Category</label>
     <input type="text" name="todo[category][category]">
   </div>
   <div>
-    <label>Status</label>
+    <label class="form-label">Status</label>
     <input type="radio" name="todo[completed]" id="completed" value="true">
-    <label for="completed">Complete</label>
+    <label class="form-label" for="completed">Complete</label>
     <input type="radio" name="todo[completed]" id="not_completed" value="false">
-    <label for="not_completed">Incomplete</label>
+    <label class="form-label" for="not_completed">Incomplete</label>
   </div>
   <div>
-    <input type="submit" value="Create todo">
+    <input class="btn" type="submit" value="Create todo">
   </div>
 </form>
