@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Biryani&family=Delius+Unicase&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@400;700&family=Delius+Unicase&display=swap');
+
+body {
+  font-family: 'Biryani', sans-serif;
+}
+
+nav {
+  margin-bottom: 1.5rem;
+}
 
 h1, h2 {
   font-family: 'Delius Unicase', cursive;
@@ -34,3 +42,18 @@ nav img {
   border-radius: 50%;
   box-shadow: 0 3px 5px 1px #000;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:active, a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+strong {
+  font-weight: 700;
+}
+

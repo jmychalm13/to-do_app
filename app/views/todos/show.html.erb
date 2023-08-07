@@ -1,9 +1,9 @@
 <h1>Todo Info</h1>
 
 <h3><%= @todo.title %></h3>
-<h5><strong>Deadline: </strong><%= @todo.deadline %></h5>
+<h5 class="date"><strong>Deadline: </strong><%= @todo.deadline %></h5>
 <p><%= @todo.description %></p>
-<a href="/todos/<%= @todo.id %>/edit">Edit Todo</a>
 
-<a href="/todos/<%= @todo.id %>" data-turbo-method="delete">Destroy todo</a>
-<a href="/todos">Back to all todos</a>
+<button class="btn info-btn mt-2"><a href="/todos/<%= @todo.id %>/edit">Edit Todo</a></button><br>
+<button class="btn info-btn mt-3"><a href="/todos/<%= @todo.id %>" data-turbo-method="delete">Destroy todo</a></button><br>
+<button class="btn back-btn mt-5"><a href="/todos">⇐ Back to all todos</a></button>

@@ -24,6 +24,7 @@
                     <div class="col-4 p-3 border">
                       <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded"><%= todo.title %></li>
                       <p><%= todo.deadline.strftime("%B %e, %Y") %></p>
+                      
                       <a href="/todos/<%= todo.id %>">More info</a>
                     </div>
                   <% end %>
