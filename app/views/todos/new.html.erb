@@ -14,7 +14,7 @@
     <input type="date" name="todo[deadline]">
   </div>
   <div class="dropdown">
-    <select name="category_id" class="form-select" aria-label="Default select example">
+    <select name="category_id" class="form-select">
       <option selected>Choose a category:</option>
       <% @categories.each do |category| %>
         <option value="<%= category.id %>"><%= category.category %></option>
