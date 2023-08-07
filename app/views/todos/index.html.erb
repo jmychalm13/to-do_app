@@ -1,14 +1,14 @@
 
 
 <section class="vh-100">
-  <div class="contain py-5 h-100">
+  <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
-      
         <div class="card align-items-center">
           <div class="card-body p-5">
+            <h2>All Todos</h2>
             <label for="add_task" class="form-label">
-            <button class="btn btn-info ms-2">
+            <button class="btn btn-info">
               <a href="/todos/new">New Todo</a>
             </button>
             </label>
@@ -16,21 +16,20 @@
         </div>
 
       </div>
-      <div class="row">
-        <ul class="list-group">
-            <div class="container text-center">
+      <div class="container px-4 text-center">
+        <div class="row gx-5">
+        <ul class="list-group">          
               <div class="row">
                   <% @todos.each do |todo| %>
-                    <div class="col-4">
+                    <div class="col-4 p-3 border">
                       <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded"><%= todo.title %></li>
-                      <%# todo: change date format to make it more readable %>
-                      <p><%= todo.deadline %></p>
+                      <p><%= todo.deadline.strftime("%B %e, %Y") %></p>
                       <a href="/todos/<%= todo.id %>">More info</a>
                     </div>
                   <% end %>
               </div>
-            </div>
           </ul>
+      </div>
       </div>
     </div>
   </div>

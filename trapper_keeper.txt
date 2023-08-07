@@ -1,3 +1,5 @@
+* this file was created by me to hold snippets that are working while I am playing with the design
+
 <h1>Todos</h1>
 
 <% @todos.each do |todo| %>

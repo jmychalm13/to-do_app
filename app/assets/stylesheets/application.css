@@ -1,5 +1,29 @@
-.btn {
+@import url('https://fonts.googleapis.com/css2?family=Biryani&family=Delius+Unicase&display=swap');
+
+h1, h2 {
+  font-family: 'Delius Unicase', cursive;
+}
+
+/* .btn {
+  font-family: 'Biryani', sans-serif;
   background-color: #CBFFAF;
+}
+
+.btn:hover {
+  transition: none;
+}
+.btn:focus {
+  transition: none;
+} */
+
+.btn {
+  color: #000;
+  background-color: #CBFFAF;
+  letter-spacing: 1.25px;
+}
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
+  color: #000;
+  background-color: #c8f8ae;
 }
 
 nav {

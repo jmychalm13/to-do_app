@@ -1,17 +1,17 @@
-<h1>New Todo</h1>
+<h2>New Todo</h2>
 <form method="post" action="/todos">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div>
     <label class="form-label">Title</label>
-    <input type="text" name="todo[title]">
+    <input class="form-control" type="text" name="todo[title]">
   </div>
   <div>
     <label class="form-label">Description</label>
-    <input type="text" name="todo[description]">
+    <input class="form-control" type="text" name="todo[description]">
   </div>
   <div>
     <label class="form-label">Deadline</label>
-    <input type="date" name="todo[deadline]">
+    <input class="form-control" type="date" name="todo[deadline]">
   </div>
   <div class="dropdown">
     <select name="category_id" class="form-select">
@@ -20,13 +20,6 @@
         <option value="<%= category.id %>"><%= category.category %></option>
       <% end %>
     </select>
-  </div>
-  <div>
-    <label class="form-label">Status</label>
-    <input type="radio" name="todo[completed]" id="completed" value="true">
-    <label class="form-label" for="completed">Complete</label>
-    <input type="radio" name="todo[completed]" id="not_completed" value="false">
-    <label class="form-label" for="not_completed">Incomplete</label>
   </div>
   <div>
     <input class="btn" type="submit" value="Create todo">
